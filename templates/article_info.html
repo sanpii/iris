@@ -1,0 +1,15 @@
+<abbr>
+  {{ article.locale_date }}
+  {% if article.author %}
+    By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+  {% endif %}
+</abbr>
+<p>
+  <i class="icon-tag"> </i>
+  <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+  {% if article.tags %}
+    {% for tag in article.tags %}
+      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+    {% endfor %}
+  {% endif %}
+</p>

@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'The Girl Next Door';
+  font-style: normal;
+  font-weight: 400;
+  src: local('The Girl Next Door'), local('TheGirlNextDoor'), url(../font/TheGirlNextDoor.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Marcellus';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Marcellus'), local('Marcellus-Regular'), url(../font/Marcellus-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata'), url(../font/Inconsolata-Regular.ttf) format('woff');
+}
+
+
 body         { font-family: 'Georgia', serif; font-size: 18px; color: #444; }
 a            { color: #004B6B; }
 a:hover      { color: #6D4100; }

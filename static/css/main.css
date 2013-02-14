@@ -52,6 +52,11 @@ td input     { border: none; padding: 0; }
 
 table.archives, .archives td, .archives th {border: none;}
 
+/*Menu*/
+#menu ul { width: 740px; margin: 0 auto; text-align: center;  padding: 0; }
+#menu ul li { list-style: none; display: inline-block; }
+#menu ul li:before { content: ""; }
+
 /*Navigation*/
 div.navigation a   { text-decoration: none;  font-size: 20px; padding: 10px;}
 div.navigation ol  { margin: 0; padding: 0;}

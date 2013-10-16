@@ -36,7 +36,10 @@
       </div>
     {% endblock navigation %}
         <header id="banner" class="body">
-                <div class="banner"><a href="{{ SITEURL }}">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></div>
+                <div class="banner">
+                    <a href="{{ SITEURL }}">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a><br />
+                    <a href="http://controle-tes-donnees.net"><img src="http://controle-tes-donnees.net/img/controle-tes-donnees.gif"></a>
+                </div>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
         {% for title, link in MENUITEMS %}

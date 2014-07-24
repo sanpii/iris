@@ -341,6 +341,9 @@ article .archive {
 .entry-content {
     margin-top: 50px;
     margin-bottom: 40px;
+}
+
+.entry-content, .entry-summary {
     text-align: justify;
 }
 

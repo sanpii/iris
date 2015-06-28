@@ -92,8 +92,8 @@ pre {
 }
 
 pre {
-    padding: 7px 30px;
-    margin: 15px -30px;
+    padding: 7px 1em;
+    margin: 15px 0px;
     line-height: 1.3;
     border-style: solid;
     border-width: 1px;
@@ -117,6 +117,10 @@ p {
     line-height: 1.4;
 }
 
+.entry-content p, .entry-summary p {
+    text-indent: 1em;
+}
+
 ul {
     margin: 15px 0 15px 0;
     padding: 15;
@@ -135,6 +139,15 @@ ol {
     line-height: 1.4;
     margin: 15px 0 15px 30px;
     padding: 15;
+}
+
+.footnote ol {
+    padding: 0;
+    margin-left: 1em;
+}
+
+.footnote p {
+    text-indent: 0;
 }
 
 blockquote {
@@ -395,4 +408,8 @@ hr {
     background-color: #FFF;
     padding: 0 1.25rem 0.725rem;
     margin: 0 auto 1.25rem auto;
+}
+
+.twitter-tweet p {
+    text-indent: 0;
 }

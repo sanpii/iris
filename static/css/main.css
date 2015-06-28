@@ -386,3 +386,13 @@ hr {
     margin-left: auto;
     margin-right: auto;
 }
+
+.twitter-tweet {
+    border: 1px solid #E1E8ED;
+    border-radius: 4px;
+    max-width: 512px;
+    overflow: hidden;
+    background-color: #FFF;
+    padding: 0 1.25rem 0.725rem;
+    margin: 0 auto 1.25rem auto;
+}

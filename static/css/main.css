@@ -68,6 +68,10 @@ h1 span {
     text-decoration: none;
 }
 
+.banner img {
+    max-width: 740px;
+}
+
 h2 {
     font-size: 30px;
     margin: 15px 0 5px 0;

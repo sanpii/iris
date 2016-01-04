@@ -4,9 +4,9 @@
         {% block head %}
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
         <!-- CSS -->
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="/theme/css/{{ CSS_FILE }}" type="text/css" />
+        <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+        <link rel="stylesheet" href="/theme/css/font-awesome.css" type="text/css" />
         <meta charset="utf-8" />
 
         {% if FEED_RSS %}
@@ -14,8 +14,8 @@
         {% endif %}
 
         <!-- Javascript-->
-        <script src="{{ SITEURL }}/theme/js/invisible-menu-scroll.js"></script>
-        <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
+        <script src="/theme/js/invisible-menu-scroll.js"></script>
+        <script src="/theme/js/jquery.min.js"></script>
         <script type="text/javascript">
           $(function() {
             invisibleMenu();
@@ -28,18 +28,18 @@
     {% block navigation %}
      <div class="navigation">
         <ol class="nav">
-          <li class="current"><a href="{{ SITEURL }}">Blog</a> </li>
-          <li><a href="{{ SITEURL }}/archives.html">Archive</a></li>
-          <li><a href="{{ SITEURL }}/tags.html">Tags</a> </li>
-          <li><a href="{{ SITEURL }}/{{ FEED_RSS }}">RSS</a> </li>
+          <li class="current"><a href="/">Blog</a> </li>
+          <li><a href="/archives.html">Archive</a></li>
+          <li><a href="/tags.html">Tags</a> </li>
+          <li><a href="/{{ FEED_RSS }}">RSS</a> </li>
         </ol>
       </div>
     {% endblock navigation %}
         <header id="banner" class="body">
                 <div class="banner">
-                    <a href="{{ SITEURL }}">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a><br />
+                    <a href="/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a><br />
                     <a href="https://soutien.laquadrature.net/" title="Soutenons La Quadrature du Net !" alt="Soutenons La Quadrature du Net !">
-                        <img src="{{ SITEURL }}/theme/img/manif_twitter_banniere.png" alt="Soutenons La Quadrature du Net !" />
+                        <img src="/theme/img/manif_twitter_banniere.png" alt="Soutenons La Quadrature du Net !" />
                     </a>
                 </div>
         </header><!-- /#banner -->
@@ -49,11 +49,11 @@
         {% endfor %}
         {% if DISPLAY_PAGES_ON_MENU %}
           {% for p in PAGES %}
-            <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+            <li{% if p == page %} class="active"{% endif %}><a href="/{{ p.url }}">{{ p.title }}</a></li>
           {% endfor %}
         {% else %}
           {% for cat, null in categories %}
-            <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+            <li{% if cat == category %} class="active"{% endif %}><a href="/{{ cat.url }}">{{ cat }}</a></li>
           {% endfor %}
         {% endif %}
         </ul></nav><!-- /#menu -->

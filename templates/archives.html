@@ -3,10 +3,10 @@
 {% block navigation %}
      <div class="navigation">
         <ol class="nav">
-          <li><a href="{{ SITEURL }}">Blog</a> </li>
-          <li class="current"><a href="{{ SITEURL }}/archives.html">Archive</a></li>
-          <li><a href="{{ SITEURL }}/tags.html">Tags</a> </li>
-          <li><a href="{{ SITEURL }}/{{ FEED_RSS }}">RSS</a> </li>
+          <li><a href="/">Blog</a> </li>
+          <li class="current"><a href="/archives.html">Archive</a></li>
+          <li><a href="/tags.html">Tags</a> </li>
+          <li><a href="/{{ FEED_RSS }}">RSS</a> </li>
         </ol>
       </div>
 {% endblock navigation %}
@@ -18,7 +18,7 @@
 {% for article in dates %}
     <tr>
         <td><time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.date.strftime('%d/%m/%Y') }}</time></td>
-        <td><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
+        <td><a href="/{{ article.url }}">{{ article.title }}</a></td>
     </tr>
 {% endfor %}
 </table>

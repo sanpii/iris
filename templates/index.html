@@ -2,10 +2,10 @@
 {% block navigation %}
      <div class="navigation">
         <ol class="nav">
-          <li class="current"><a href="{{ SITEURL }}">Blog</a> </li>
-          <li><a href="{{ SITEURL }}/archives.html">Archive</a></li>
-          <li><a href="{{ SITEURL }}/tags.html">Tags</a> </li>
-          <li><a href="{{ SITEURL }}/{{ FEED_RSS }}">RSS</a> </li>
+          <li class="current"><a href="/">Blog</a> </li>
+          <li><a href="/archives.html">Archive</a></li>
+          <li><a href="/tags.html">Tags</a> </li>
+          <li><a href="/{{ FEED_RSS }}">RSS</a> </li>
         </ol>
       </div>
 {% endblock navigation %}
@@ -18,13 +18,13 @@
             <article class="archive">
                 <header>
                     <h1 class="archive-entry-title">
-                        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title}}">{{ article.title }}</a>
+                        <a href="/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title}}">{{ article.title }}</a>
                     </h1>
                 </header>
                 <footer class="post-info">
                     {% include "article_info.html" %}
                     <div class="entry-summary"> {{ article.summary }}
-                    <a href="{{ SITEURL }}/{{ article.url }}">read more</a></div>
+                    <a href="/{{ article.url }}">read more</a></div>
                 </footer><!-- /.post-info -->
                 <!-- /.entry-content -->
             </article>

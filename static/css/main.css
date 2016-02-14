@@ -363,6 +363,7 @@ article .archive {
 p img {
     margin: 0 auto;
     display: block;
+    max-width: 740px;
 }
 
 h1.archive-entry-title,

@@ -18,18 +18,24 @@
 
 {% if PIWIK_URL %}
 <script type="text/javascript">
+    if (window.location.hostname.match('.onion$')) {
+        var u = '{{ PIWIK_ONION }}';
+    }
+    else {
+        var u = '{{ PIWIK_URL}}';
+    }
+
     var _paq = _paq || [];
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function() {
-        var u="https://{{ PIWIK_URL }}/";
-        _paq.push(['setTrackerUrl', u+'p.php']);
+        _paq.push(['setTrackerUrl', u+'/p.php']);
         _paq.push(['setSiteId', {{ PIWIK_SITE_ID }}]);
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'p.js'; s.parentNode.insertBefore(g,s);
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'/p.js'; s.parentNode.insertBefore(g,s);
     })();
 </script>
-<noscript><p><img src="https://{{ PIWIK_URL }}/p.php?idsite={{ PIWIK_SITE_ID }}" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="{{ PIWIK_ONION }}/p.php?idsite={{ PIWIK_SITE_ID }}" style="border:0;" alt="" /></p></noscript>
 {% endif %}
 
 {% if GOSQUARED_SITENAME %}

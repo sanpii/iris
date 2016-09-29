@@ -1,4 +1,18 @@
 {% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+
+    <meta property="og:title" content="{{ article.title }}" />
+    <meta property="og:type" content="article" />
+    {% if article.image %}
+        <meta property="og:image" content="{{ FEED_DOMAIN }}/{{ article.image }}" />
+    {% endif %}
+    <meta property="og:url" content="{{ FEED_DOMAIN }}/{{ article.url }}" />
+    <meta property="og:description" content="{{ article.summary|e }}" />
+    <meta property="og:site_name" content="{{ SITENAME }}" />
+{% endblock %}
+
 {% block navigation %}
      <div class="navigation">
         <ol class="nav">
@@ -9,6 +23,7 @@
         </ol>
       </div>
 {% endblock navigation %}
+
 {% block content %}
 <section id="content" class="body">
   <header class="post">

@@ -3,6 +3,16 @@
 {% block head %}
     {{ super() }}
 
+    <meta property="twitter:card" content="summary" />
+    {% if article.author %}
+        <meta property="twitter:site" content="@{{ article.author }}" />
+    {% endif %}
+    <meta property="twitter:title" content="{{ article.title }}" />
+    {% if article.image %}
+        <meta property="twitter:image" content="{{ FEED_DOMAIN }}/{{ article.image }}" />
+    {% endif %}
+    <meta property="twitter:description" content="{{ article.summary|e }}" />
+
     <meta property="og:title" content="{{ article.title }}" />
     <meta property="og:type" content="article" />
     {% if article.image %}

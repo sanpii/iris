@@ -1,5 +1,6 @@
 {
     "name": "sanpi/iris",
     "dependencies": {
+        "jquery": "1.8.3"
     }
 }

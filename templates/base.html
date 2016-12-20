@@ -62,10 +62,10 @@
                 <div>&lt;3</div>
                 <div class="social">
                     {% for name, link in SOCIAL %}
-                        <a href="{{ link }}"><i class="icon-{{ name }}"></i>  </a>
+                        <a href="{{ link }}"><i class="fa fa-{{ name }}"></i>  </a>
                     {% endfor %}
                     {% if EMAIL%}
-                        <a href="mailto:{{ EMAIL }}"><i class="icon-envelope"></i> </a>
+                        <a href="mailto:{{ EMAIL }}"><i class="fa fa-envelope"></i> </a>
                     {% endif %}
                 </div>
             </footer><!-- /#contentinfo -->

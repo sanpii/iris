@@ -2,6 +2,6 @@
     "name": "sanpi/iris",
     "dependencies": {
         "jquery": "1.8.3",
-        "font-awesome": "~3.0"
+        "font-awesome": "~4.0"
     }
 }

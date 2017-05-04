@@ -1,27 +1,4 @@
-
-@font-face {
-    font-family: 'The Girl Next Door';
-    font-style: normal;
-    font-weight: 400;
-    src: local('The Girl Next Door'), local('TheGirlNextDoor'), url(../font/TheGirlNextDoor.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Marcellus';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Marcellus'), local('Marcellus-Regular'), url(../font/Marcellus-Regular.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Inconsolata';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Inconsolata'), url(../font/Inconsolata-Regular.ttf) format('woff');
-}
-
 body {
-    font-family: 'Georgia', serif;
     font-size: 18px;
     color: #444;
     word-wrap: break-word;
@@ -42,7 +19,6 @@ a:hover {
 }
 
 h2, h3, h4 {
-    font-family: 'Marcellus', serif;
     font-weight: normal;
     color: #222;
 }
@@ -58,9 +34,9 @@ h1 span {
 
 .banner {
     width: 740px;
-    font-size: 40px;
+    font-size: 42px;
     margin: 30px auto 5px auto;
-    font-family: 'The Girl Next Door', cursive;
+    font-family: cursive;
     text-align: center;
 }
 
@@ -85,7 +61,7 @@ h4 {
 
 textarea, code, tt,
 pre {
-    font-family: 'Inconsolata', sans-serif, monospace!important;
+    font-family: sans-serif, monospace!important;
     color: #000;
     font-size: 18px;
     background: #eee;
@@ -369,7 +345,6 @@ p img {
 h1.archive-entry-title,
 .entry-title,
 h1.archive-entry-title a {
-    font-family: 'Marcellus', serif;
     font-weight: normal;
     font-size: 40px;
     text-decoration: none;
@@ -378,7 +353,7 @@ h1.archive-entry-title a {
 
 .entry-title {
     color: #222;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .entry-content h2 {

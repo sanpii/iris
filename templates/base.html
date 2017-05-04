@@ -13,14 +13,6 @@
         <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
         {% endif %}
 
-        <!-- Javascript-->
-        <script src="/theme/js/invisible-menu-scroll.js"></script>
-        <script src="/theme/lib/jquery/jquery.min.js"></script>
-        <script type="text/javascript">
-          $(function() {
-            invisibleMenu();
-          });
-        </script>
         {% endblock head %}
 </head>
 
@@ -69,5 +61,8 @@
         </div>
         <!--Add statistycs-->
         {% include 'analytics.html' %}
+
+        <!-- Javascript-->
+        <script src="/theme/js/invisible-menu-scroll.js"></script>
 </body>
 </html>

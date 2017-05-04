@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
-<head>
+    <head>
         {% block head %}
-        <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-        <!-- CSS -->
-        <link rel="stylesheet" href="/theme/css/{{ CSS_FILE }}" type="text/css" />
-        <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
-        <link rel="stylesheet" href="/theme/lib/font-awesome/css/font-awesome.css" type="text/css" />
-        <meta charset="utf-8" />
+            <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
-        {% if FEED_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
-        {% endif %}
+            <link rel="stylesheet" href="/theme/css/{{ CSS_FILE }}" type="text/css" />
+            <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+            <link rel="stylesheet" href="/theme/lib/font-awesome/css/font-awesome.css" type="text/css" />
+            <meta charset="utf-8" />
 
+            {% if FEED_RSS %}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+            {% endif %}
         {% endblock head %}
-</head>
+    </head>
 
-<body id="index" class="home">
-    {% block navigation %}
-     <div class="navigation">
-        <ol class="nav">
-          <li class="current"><a href="/">Blog</a> </li>
-          <li><a href="/archives.html">Archive</a></li>
-          <li><a href="/tags.html">Tags</a> </li>
-          <li><a href="/{{ FEED_RSS }}">RSS</a> </li>
-        </ol>
-      </div>
-    {% endblock navigation %}
+    <body id="index" class="home">
+        {% block navigation %}
+            <div class="navigation">
+                <ol class="nav">
+                <li class="current"><a href="/">Blog</a> </li>
+                <li><a href="/archives.html">Archive</a></li>
+                <li><a href="/tags.html">Tags</a> </li>
+                <li><a href="/{{ FEED_RSS }}">RSS</a> </li>
+                </ol>
+            </div>
+        {% endblock navigation %}
+
         <header id="banner" class="body">
-                <div class="banner">
-                    <a href="/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a><br />
-                </div>
-        </header><!-- /#banner -->
-        <nav id="menu"><ul>
-        {% for title, link in MENUITEMS %}
-            <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU %}
-          {% for p in PAGES %}
-            <li{% if p == page %} class="active"{% endif %}><a href="/{{ p.url }}">{{ p.title }}</a></li>
-          {% endfor %}
-        {% else %}
-          {% for cat, null in categories %}
-            <li{% if cat == category %} class="active"{% endif %}><a href="/{{ cat.url }}">{{ cat }}</a></li>
-          {% endfor %}
-        {% endif %}
-        </ul></nav><!-- /#menu -->
+            <div class="banner">
+                <a href="/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a><br />
+            </div>
+        </header>
+
+        <nav id="menu">
+            <ul>
+                {% for title, link in MENUITEMS %}
+                    <li><a href="{{ link }}">{{ title }}</a></li>
+                {% endfor %}
+                {% if DISPLAY_PAGES_ON_MENU %}
+                    {% for p in PAGES %}
+                        <li{% if p == page %} class="active"{% endif %}><a href="/{{ p.url }}">{{ p.title }}</a></li>
+                    {% endfor %}
+                    {% else %}
+                    {% for cat, null in categories %}
+                        <li{% if cat == category %} class="active"{% endif %}><a href="/{{ cat.url }}">{{ cat }}</a></li>
+                    {% endfor %}
+                {% endif %}
+            </ul>
+        </nav>
+
         <div class="box">
             {% block content %}
             {% endblock %}
@@ -57,12 +61,11 @@
                     {% endfor %}
                 </div>
                 <div>{{ LICENSE }}</div>
-            </footer><!-- /#contentinfo -->
+            </footer>
         </div>
-        <!--Add statistycs-->
+
         {% include 'analytics.html' %}
 
-        <!-- Javascript-->
         <script src="/theme/js/invisible-menu-scroll.js"></script>
-</body>
+    </body>
 </html>

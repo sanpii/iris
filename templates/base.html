@@ -59,12 +59,12 @@
             {% endblock %}
             <hr/>
             <footer id="contentinfo" class="footer">
-                <div>&lt;3</div>
                 <div class="social">
                     {% for name, link in SOCIAL %}
                         <a href="{{ link }}"><i class="fa fa-{{ name }}"></i>  </a>
                     {% endfor %}
                 </div>
+                <div>{{ LICENSE }}</div>
             </footer><!-- /#contentinfo -->
         </div>
         <!--Add statistycs-->
